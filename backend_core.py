@@ -110,7 +110,7 @@ def prompt_template_builder(system_instructions: str, context: str, history: str
 
 # --- 4. Global Instances ---
 # Initialize DB and Manager when the module loads
-vector_db = initialize_knowledge_base()
+##vector_db = initialize_knowledge_base()
 session_manager = SessionManager(PROFILE_FILE, LOG_FILE)
 
 # --- 5. Main RAG Pipeline ---

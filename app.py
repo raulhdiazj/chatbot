@@ -61,7 +61,13 @@ if user_query := st.chat_input("Paste your Colab error message or question here.
         response_placeholder = st.empty()
         with st.spinner("Analyzing knowledge framework / logs..."):
             # Core processing execution
-            bot_response = run_colabbuddy_pipeline(USER_ID, SESSION_ID, user_query)
+            # bot_response = run_colabbuddy_pipeline(USER_ID, SESSION_ID, user_query)
+            bot_response = run_colabbuddy_pipeline( 
+                USER_ID, 
+                SESSION_ID, 
+                user_query, 
+                st.secrets["HF_TOKEN"]
+            )
             
         # Simulated streaming response effect for better UI usability
         full_response = ""
